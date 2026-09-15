@@ -142,9 +142,10 @@ As duas versões usam o mesmo modelo, os mesmos ganhos e a mesma curva de refer�
 | `ensaios/brutos/10em10_midle.csv` | Varredura de comando, bateria parcial |
 | `ensaios/brutos/10em10_baixo.csv` | Varredura de comando, bateria baixa (fora do envelope de voo, não usada no ajuste) |
 | `ensaios/brutos/full_full.csv` | Descarga com comando próximo do pleno, partindo de bateria plena |
-| `ensaios/*.xlsx` | Planilhas de análise com os pontos de regime |
+| `ensaios/Progressão_FULLBAT.xlsx` e `ensaios/Progressão_HALFBAT.xlsx` | Recortes das duas varreduras usadas no ajuste do modelo |
+| `ensaios/SimulaçãoDecolagem_FULLBAT_CONDIÇÃO_REAL_VOO.xlsx` | Recorte do ensaio de descarga, usado na validação |
 
-Os CSV vêm do registrador interno do ESC, separados por ponto e vírgula e com vírgula decimal. As colunas incluem tempo, comando, corrente, tensão, potência elétrica e rotação do motor.
+Os CSV são os originais, gravados pelo registrador interno do ESC, separados por ponto e vírgula e com vírgula decimal. As colunas incluem tempo, comando, corrente, tensão, potência elétrica e rotação do motor. As planilhas são recortes deles, sem nenhum valor alterado.
 
 ## Estado atual
 
