@@ -52,7 +52,9 @@ O modelo foi levantado em bancada estática, com duas varreduras de comando em e
 
 Compondo os dois, o expoente previsto é 2,46. O ajuste direto deu 2,39, o que confirma a estrutura sem forçar o resultado.
 
-$$P = 0{,}4620 \cdot \left(\frac{thr}{100} \cdot V\right)^{2{,}388}$$
+```math
+P = 0{,}4620 \cdot \left(\frac{thr}{100} \cdot V\right)^{2{,}388}
+```
 
 em que `P` é a potência elétrica (W), `thr` é o comando (%) e `V` é a tensão da bateria (V).
 
@@ -76,9 +78,13 @@ Os "dados novos" são as 359 amostras do ensaio de descarga, que não entraram n
 
 A ação antecipatória é o próprio modelo invertido. Ela já compensa a descarga sozinha, porque usa a tensão medida. A malha PID só corrige o que sobra.
 
-$$thr_{ff} = \frac{100}{V} \cdot \left(\frac{P^{*}}{0{,}4620}\right)^{1/2{,}388}$$
+```math
+thr_{ff} = \frac{100}{V} \cdot \left(\frac{P^{*}}{0{,}4620}\right)^{1/2{,}388}
+```
 
-$$thr_{out} = thr_{ff} + K_p \, e + K_i \int e \, dt - K_d \, \frac{dP_{med}}{dt}, \qquad e = P^{*} - P_{med}$$
+```math
+thr_{out} = thr_{ff} + K_p \, e + K_i \int e \, dt - K_d \, \frac{dP_{med}}{dt}, \qquad e = P^{*} - P_{med}
+```
 
 | Ganho | Valor | Critério |
 |---|---|---|
